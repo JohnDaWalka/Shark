@@ -13,8 +13,8 @@
 
 ## Setup and validation
 - Create a virtual environment and install dependencies:
-  - `python -m venv .venv && source .venv/bin/activate` (or `.venv\\Scripts\\activate` on Windows)
-  - `python -m pip install -r requirements.txt`
+  - `python -m venv .venv && source .venv/bin/activate` (or `.venv\Scripts\activate` on Windows)
+  - `python -m pip install -r requirements.txt` (currently no third-party packages, but keeps environments aligned)
 - There are no automated tests yet. If you add tests, prefer `pytest` in a `tests/` directory and keep them cross-platform.
 - For quick manual validation: `python -m compileall src` and run `python -m src.platform_utils` to ensure platform info prints without errors.
 
