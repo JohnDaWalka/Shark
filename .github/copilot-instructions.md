@@ -12,8 +12,9 @@
 - Leave Sourcery feedback in place and keep CI workflows unchanged unless explicitly requested.
 
 ## Setup and validation
-- Create a virtual environment:
-  - Unix/macOS: `python -m venv .venv && source .venv/bin/activate`
+- Create a virtual environment: `python -m venv .venv`
+- Activate it:
+  - Unix/macOS: `source .venv/bin/activate`
   - Windows (Command Prompt): `.venv\Scripts\activate.bat`
   - Windows (PowerShell): `.venv\Scripts\Activate.ps1`
 - Install dependencies if/when they are added (currently none): `python -m pip install -r requirements.txt`
