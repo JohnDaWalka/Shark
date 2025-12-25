@@ -1,7 +1,7 @@
 # Copilot Coding Agent Instructions
 
 ## Repository purpose and scope
-- Shark is a cross-platform Python project that will evolve into complex chatbot integrations (e.g., Perplexity- or Grok-style experiences).
+- Shark is a cross-platform Python project that will evolve into complex chatbot integrations (e.g., Perplexity or Grok-style experiences).
 - Primary language: Python 3 with standard library utilities in `src/platform_utils.py`.
 - Preserve Windows, macOS, and Linux compatibility; avoid platform-specific regressions.
 
@@ -13,8 +13,8 @@
 
 ## Setup and validation
 - Create a virtual environment and install dependencies:
-  - `python -m venv .venv && source .venv/bin/activate` (Unix/macOS) or `.venv\Scripts\activate` (Windows)
-  - `python -m pip install -r requirements.txt` (currently no third-party packages, but keeps environments aligned)
+  - `python -m venv .venv && source .venv/bin/activate` (Unix/macOS) or `.venv\Scripts\activate.bat` (Command Prompt) / `.venv\Scripts\Activate.ps1` (PowerShell) on Windows
+  - `python -m pip install -r requirements.txt` (currently no third-party packages are listed; run once dependencies are added)
 - There are no automated tests yet. If you add tests, prefer `pytest` in a `tests/` directory and keep them cross-platform.
 - For quick manual validation: `python -m compileall src` and run `python -m src.platform_utils` to ensure platform info prints without errors.
 
