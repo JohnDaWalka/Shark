@@ -49,11 +49,7 @@ $RECYCLE.BIN/
 *.lnk
 *.stackdump
 
-# Windows shortcuts
-*.lnk
-
 # macOS
-.DS_Store
 .AppleDouble
 .LSOverride
 Icon
