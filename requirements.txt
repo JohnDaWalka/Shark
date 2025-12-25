@@ -1,0 +1,5 @@
+# Shark - Python Dependencies
+# This file lists Python packages required for the project
+
+# No external dependencies required for basic functionality
+# The platform_utils module uses only standard library modules
