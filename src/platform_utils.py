@@ -7,6 +7,7 @@ This module provides cross-platform utilities with special handling for Windows.
 import os
 import platform
 import sys
+import tempfile
 from pathlib import Path
 from typing import Optional, Dict, Any
 
@@ -150,7 +151,6 @@ class PathUtils:
     @staticmethod
     def get_temp_dir() -> Path:
         """Get temporary directory in a cross-platform way."""
-        import tempfile
         return Path(tempfile.gettempdir())
 
 

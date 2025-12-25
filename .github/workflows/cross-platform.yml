@@ -10,7 +10,7 @@ on:
 jobs:
   test-windows:
     name: Test on Windows
-    runs-on: windows-latest
+    runs-on: ${{ matrix.windows-version }}
     strategy:
       matrix:
         windows-version: [windows-latest, windows-2022, windows-2019]

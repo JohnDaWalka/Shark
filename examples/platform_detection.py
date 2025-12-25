@@ -8,7 +8,8 @@ to write code that adapts to different operating systems.
 import sys
 from pathlib import Path
 
-# Add parent directory to path to allow imports
+# Add parent directory to path for examples
+# Note: In production code, install the package properly instead
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.platform_utils import PlatformInfo, PathUtils, WindowsUtils
