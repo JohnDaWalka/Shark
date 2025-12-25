@@ -7,10 +7,15 @@ on:
     branches: [ main, develop ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test-windows:
     name: Test on Windows
     runs-on: ${{ matrix.windows-version }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         windows-version: [windows-latest, windows-2022, windows-2019]
@@ -34,6 +39,8 @@ jobs:
   test-linux:
     name: Test on Linux
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -53,6 +60,8 @@ jobs:
   test-macos:
     name: Test on macOS
     runs-on: macos-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -72,6 +81,8 @@ jobs:
   cross-platform-summary:
     name: Cross-Platform Summary
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs: [test-windows, test-linux, test-macos]
     if: always()
     steps:
